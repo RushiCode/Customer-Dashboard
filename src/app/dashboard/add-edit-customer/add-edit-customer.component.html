@@ -1,1 +1,67 @@
-<p>add-edit-customer works!</p>
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title">{{ data != null ? 'Edit Details' : 'Add Details' }}</h5>
+
+  </div>
+  <div class="modal-body">
+
+    <form name="CustomerForms" [formGroup]="CustomerForm">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">First name</label>
+        <input type="text" class="form-control" formControlName="first" id="exampleFormControlInput1"
+          placeholder="First name">
+        <div class="text-danger fw-normal my-1">
+          <span *ngIf="Customer['first'].errors?.['required'] && (Customer['first'].touched || submitted)"> <i
+              class="fa fa-exclamation-triangle me-1" aria-hidden="true"></i> Please enter first name
+          </span>
+
+        </div>
+
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Last name</label>
+        <input type="text" class="form-control" formControlName="last" id="exampleFormControlInput1"
+          placeholder="Last name">
+        <div class="text-danger fw-normal my-1">
+          <span *ngIf="Customer['last'].errors?.['required'] && (Customer['last'].touched || submitted)"><i
+              class="fa fa-exclamation-triangle me-1" aria-hidden="true"></i> Please enter last name
+          </span>
+
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email</label>
+        <input type="text" class="form-control" formControlName="email" id="exampleFormControlInput1"
+          placeholder="email">
+        <div class="text-danger fw-normal my-1">
+          <span *ngIf="Customer['email'].errors?.['required'] && (Customer['email'].touched || submitted)"><i
+              class="fa fa-exclamation-triangle me-1" aria-hidden="true"></i> Please enter email
+          </span>
+          <span *ngIf="Customer['email'].errors?.['email'] && (Customer['email'].touched || submitted)">
+            <i class="fa fa-exclamation-triangle me-1" aria-hidden="true"></i>Please enter correct email
+          </span>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Phone</label>
+        <input type="text" class="form-control" maxlength="10" minlength="10"
+          onkeypress="return event.keyCode === 8 || event.charCode >= 48 && event.charCode <= 57"
+          formControlName="phone" id="exampleFormControlInput1" placeholder="Phone">
+        <div class="text-danger fw-normal my-1">
+          <span *ngIf="Customer['phone'].errors?.['required'] && (Customer['phone'].touched || submitted)">
+            <i class="fa fa-exclamation-triangle me-1" aria-hidden="true"></i> Please enter phone Number!
+          </span>
+          <span *ngIf="Customer['phone'].errors?.['minlength'] && (Customer['phone'].touched || submitted)">
+            <i class="fa fa-exclamation-triangle me-1" aria-hidden="true"></i> Please enter Valid phone Number
+          </span>
+
+        </div>
+
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="activeModal.close()" data-bs-dismiss="modal">Close</button>
+    <button type="button" class="btn btn-primary" [disabled]="CustomerForm.invalid" (click)="onSave()">Add</button>
+  </div>
+</div>

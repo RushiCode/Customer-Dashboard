@@ -10,13 +10,17 @@ import { AddEditCustomerComponent } from './dashboard/add-edit-customer/add-edit
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
+import { DxDataGridModule } from 'devextreme-angular';
+import { ToastrModule } from 'ngx-toastr';
+import { ConfirmComponent } from './confirm/confirm.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    AddEditCustomerComponent
+    AddEditCustomerComponent,
+    ConfirmComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     NgbModule,
     ReactiveFormsModule,
+    DxDataGridModule,
+    ToastrModule.forRoot(),
     
   ],
   providers: [],

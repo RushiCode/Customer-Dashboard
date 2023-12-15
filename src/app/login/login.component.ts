@@ -32,7 +32,7 @@ export class LoginComponent {
 
   onSubmit() {
     debugger
-    this.router.navigate(['/dash']);
+    this.router.navigate(['/dashboard']);
     return;
   }
 }

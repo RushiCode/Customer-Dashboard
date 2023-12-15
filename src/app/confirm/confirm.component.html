@@ -1,0 +1,14 @@
+<div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">{{popupType.title}}</h5>
+      
+    </div>
+    <div class="modal-body">
+      <p>{{popupType.message}}</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" (click)="activeModal.close('no')" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      <button type="button" (click)="onSave('yes')" class="btn btn-danger">Yes</button>
+    </div>
+  </div>
+

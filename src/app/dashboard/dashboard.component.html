@@ -1,1 +1,217 @@
-<p>dashboard works!</p>
+
+<div class="wrapper d-flex container-fluid py-2" id="dashboard">
+
+    <main>
+        <nav class="navbar bg-white topnav bo-radius-25">
+            <div class="container-fluid px-4">
+                <a class="navbar-brand font-24 font-weight-700">Customer </a>
+             
+                <div class="d-flex">
+                    
+                    <button type="button" class="btn btn-outline-dark border-border-gray bo-radius-10 mx-1 iconbtn">
+                        <div class="position-relative">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-bell"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="#2c3e50"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />
+                                <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
+                            </svg>
+                            <span class="position-absolute top-0 start-100 translate-middle badge font-7 border- rounded-pill bg-dark-gray">
+                                2
+                            </span>
+                        </div>
+                    </button>
+                    <button type="button" (click)="logout()" class="btn btn-outline-danger  bo-radius-10 iconbtn">
+                        <div class="position-relative">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-logout" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#F04438" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+                                <path d="M9 12h12l-3 -3" />
+                                <path d="M18 15l3 -3" />
+                              </svg>
+                            
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    
+        <div class="scroll">
+            <div class="Contant container-fluid overflow-y-auto">
+                <div class="row mt-2">
+                    <div class="col-12 col-lg-4">
+                        <div class="bg-white bo-radius-25 ">
+                            <div class=" py-4 border-bottom">
+                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                    <h5>My Cards:1<small class="text-font font-14">/2</small></h5>
+                                    <div class="d-flex align-items-center">
+                                        <button type="button" class="btn btn-outline-secondary border-border-gray mx-1 text-dark-gray bo-radius-10"><i class="fa-solid fa-angle-left"></i></button>
+                                        <button type="button" class="btn mx-1 bo-radius-10 btn-outline-secondary border-border-gray text-dark-gray"><i class="fa-solid fa-angle-right"></i></button>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <img src="./assets/img/card.png" alt="" class="w-100 bo-radius-25" />
+                                </div>
+    
+                                <div class="my-2">
+                                    <button class="btn btn-primary w-100 addbtncard" type="submit"><i class="fa-solid fa-circle-plus me-2"></i>Add New Card</button>
+                                </div>
+                            </div>
+                            <div class=" py-4 border-bottom">
+                                <h5 class="mb-2">Quick Actions</h5>
+                                <div class="d-flex align-items-center justify-content-between p-4 border bo-radius-20">
+                                    <div class="d-flex flex-column align-items-center justify-content-center col-4 border-end">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-circle-plus"
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            stroke-width="1.5"
+                                            stroke="#2c3e50"
+                                            fill="none"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        >
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                                            <path d="M9 12h6" />
+                                            <path d="M12 9v6" />
+                                        </svg>
+                                        Top up
+                                    </div>
+                                    <div class="d-flex flex-column align-items-center justify-content-center col-4 border-end">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-send"
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            stroke-width="1.5"
+                                            stroke="#2c3e50"
+                                            fill="none"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        >
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M10 14l11 -11" />
+                                            <path d="M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5" />
+                                        </svg>
+                                        Transfer
+                                    </div>
+                                    <div class="d-flex flex-column align-items-center justify-content-center col-4">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-brand-mastercard"
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            stroke-width="1.5"
+                                            stroke="#2c3e50"
+                                            fill="none"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        >
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M14 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                                            <path d="M12 9.765a3 3 0 1 0 0 4.47" />
+                                            <path d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+                                        </svg>
+                                        Withdraw
+                                    </div>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-8">
+                      
+                        <div class="py-4 bg-white bo-radius-25 table-data">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <h5>Customer Details</h5>
+                                <div class="d-flex align-items-center">
+                             
+    
+                                    <button type="button" (click)="addCustomer()"  class="btn btn-outline-secondary border-border-gray mx-1 d-flex align-items-center border text-dark-gray bo-radius-10">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M12 5l0 14" />
+                                            <path d="M5 12l14 0" />
+                                          </svg>
+                                        Add
+                                    </button>
+                                  
+                                </div>
+                            </div>
+    
+
+                            <dx-data-grid #dataGridVar id="dataGridVar" [dataSource]="newUsers" 
+                            [allowColumnReordering]="true" [rowAlternationEnabled]="true" [showBorders]="true"
+                            keyExpr="id" [allowColumnResizing]="true"
+                            [focusedRowEnabled]="true" [hoverStateEnabled]="true" 
+                            [columnMinWidth]="50" [columnAutoWidth]="true">
+                            <dxo-remote-operations [filtering]="true" [paging]="true" [sorting]="true"></dxo-remote-operations>
+                            <dxo-paging [pageSize]="15"></dxo-paging>
+                            <dxo-pager [visible]="true" [showPageSizeSelector]="true"
+                                [allowedPageSizes]="[15, 30, 50, 100]" [showInfo]="true"
+                                [showNavigationButtons]="true">
+                            </dxo-pager>
+
+                            <dxo-search-panel placeholder="search" [visible]="true"
+                                [highlightCaseSensitive]="true"></dxo-search-panel>
+                            <dxo-sorting mode="multiple"></dxo-sorting>
+                            <dxo-column-chooser [enabled]="true" mode="dragAndDrop">
+                            </dxo-column-chooser>
+                          
+                            <dxo-column-fixing [enabled]="true"></dxo-column-fixing>
+                            <dxo-filter-row [visible]="true"></dxo-filter-row>
+                            <dxo-header-filter [visible]="true"></dxo-header-filter>
+                          
+                            <dxi-column dataField="first" caption="First"
+                                dataType="string"></dxi-column>
+                            <dxi-column dataField="last" caption="Last"
+                                dataType="string"></dxi-column>
+                            <dxi-column dataField="Email" caption="Email"
+                                dataType="string"></dxi-column>
+                            <dxi-column dataField="phone" caption="Phone"
+                                dataType="string"></dxi-column>
+                                <dxi-column dataField="createdAt"  sortOrder="desc" caption="Date"
+                                dataType="date"></dxi-column>
+
+
+                                <dxi-column [width]="100" caption="Action" [allowHiding]="false" [allowFiltering]="false"
+                                [allowSorting]="false" cellTemplate="cellTemplate">
+                                <div *dxTemplate="let celldata of 'cellTemplate'">
+                                    <a href="javascript:;" class="mx-2 text-secondary" title="edit"
+                                    (click)="editCustomer(celldata.data.id)">
+                                    <i class="fas fa-edit"></i></a>
+                                    <a href="javascript:;" class="mx-2 text-danger" title="delete"
+                                    (click)="deleteCustomerid(celldata.data.id)">
+                                    <i class="fa-solid fa-trash"></i></a>
+                                   
+                                </div>
+
+                            </dxi-column>   
+                           
+                        </dx-data-grid>
+
+
+
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    </div>
