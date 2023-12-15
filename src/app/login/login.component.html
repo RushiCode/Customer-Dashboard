@@ -1,0 +1,45 @@
+<div id="login">
+    <main class="main">
+        <div class="container">
+            <section class="wrapper">
+                <div class="heading">
+                    <h1 class="text text-large">Sign In</h1>
+                    <p class="text text-normal">New user? <span><a href="#" class="text text-links">Create an account</a></span>
+                    </p>
+                </div>
+                <form  name="loginform" [formGroup]="loginform" class="form">
+                    <div class="input-control flex-column align-items-start">
+                        <label for="email" class="input-label" hidden>Email Address</label>
+                        <input type="email" name="email" id="email" formControlName="email" class="input-field" placeholder="Email Address">
+                        <div   class="text-danger fw-normal">
+                            <span *ngIf="login['email'].errors?.['required'] && (login['email'].touched || submitted)">Please enter email 
+                            </span>
+                            <span *ngIf="login['email'].errors?.['email'] && (login['email'].touched || submitted)">
+                                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Please enter correct email
+                            </span>
+                            </div>
+                    </div>
+                    
+    
+                    <div class="input-control flex-column align-items-start">
+                        <label for="password" class="input-label" hidden>Password</label>
+                        <input type="password" name="password" id="password" formControlName="password"  class="input-field" placeholder="Password">
+                        <div   class="text-danger fw-normal">
+                        <span *ngIf="login['password'].errors?.['required'] && (login['password'].touched || submitted)">
+                            <i class="fa fa-exclamation-triangle me-1" aria-hidden="true"></i> Password is required!
+                        </span>
+                        <span *ngIf="login['password'].errors?.['minlength'] && (login['password'].touched || submitted)">
+                            <i class="fa fa-exclamation-triangle me-1" aria-hidden="true"></i> Password should be at least 6 characters long.
+                        </span>
+                        </div>
+                    </div>
+                    <div class="input-control">
+                        <a href="#" class="text text-links">Forgot Password</a>
+                        <button type="submit" name="submit" class="input-submit" [disabled]="loginform.invalid" (click)="onSubmit()" >Sign In</button>
+                    </div>
+                </form>
+                
+            
+            </section>
+        </div>
+    </main></div>
